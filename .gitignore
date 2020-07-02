@@ -1,2 +1,5 @@
 config.json
 __pycache__/keep_alive.cpython-38.pyc
+cmds/__pycache__/events.cpython-38.pyc
+cmds/__pycache__/moderations.cpython-38.pyc
+cmds/__pycache__/utilities.cpython-38.pyc
