@@ -31,4 +31,4 @@ kick|踢出成員|Moderations|Administrator
 ban|封禁成員|Moderations|Administrator
 enable|啟用功能|Core|Owner
 disable|停用功能|Core|Owner
-reload|重新讀取功能區|Core|Owner
+reload|重新載入功能區|Core|Owner
