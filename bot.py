@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+import os
 import keep_alive
 
 with open('config.json', 'r', encoding='utf8') as data:
@@ -23,6 +24,10 @@ async def help(ctx):
 @bot.command()
 async def prefix(ctx):
 	await ctx.send(f'在這個Server的Prefix是`{bot.command_prefix}`唷')
+
+for filename in os.listdir('./cmds'):
+	if filename.endswith('.py'):
+		bot.load_extension(f'cmds.{filename[:-3]}')
 
 keep_alive.keep_alive()
 bot.run(config['token'])
