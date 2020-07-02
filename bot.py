@@ -12,6 +12,6 @@ bot = commands.Bot(command_prefix=config['prefix'])
 async def on_ready():
 	print(f'Logged in as: {bot.user.name}')
 	print(f'With ID: {bot.user.id}')
-	print(f'Prefix: {bot.get_prefix}')
+	print(f'Prefix: {bot.command_prefix}')
 
 bot.run(config['token'])
