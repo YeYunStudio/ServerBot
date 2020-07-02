@@ -17,6 +17,7 @@ async def on_ready():
 bot.remove_command('help')
 @bot.command()
 async def help(ctx):
+	await ctx.send('請到此處查看唷')
 	await ctx.send(config['help'])
 
 @bot.command()
