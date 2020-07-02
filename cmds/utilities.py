@@ -11,7 +11,7 @@ class Utilities(commands.Cog):
 	async def on_ready(self):
 		print(f'loaded cog: {__name__}')
 
-	@bot.command()
+	@commands.command()
 	async def ping(self, ctx):
 		await ctx.send('Pong!\n目前延遲是{round(self.bot.latency*1000)}ms唷～')
 
