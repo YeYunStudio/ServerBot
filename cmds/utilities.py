@@ -13,7 +13,7 @@ class Utilities(commands.Cog):
 
 	@commands.command()
 	async def ping(self, ctx):
-		await ctx.send('Pong!\n目前延遲是{round(self.bot.latency*1000)}ms唷～')
+		await ctx.send(f'Pong!\n目前延遲是{round(self.bot.latency*1000)}ms唷～')
 
 def setup(bot):
 	bot.add_cog(Utilities(bot))
