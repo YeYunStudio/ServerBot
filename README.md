@@ -5,7 +5,11 @@
 ## About Bot
 
 本Bot是委託夜雲工作室製作
-委託請找工程師ユキ綾乃或她弟弟ユキ綾香
+委託請找工程師[ユキ綾乃](mailto:sijing10949@gmail.com)或她弟弟[ユキ綾香](mailto:james48118510@gmail.com)
+本Bot可作為模板使用
+按上方圖標即可直接使用最新版本
+config需要自行生成
+把__example_config.json__複製一份後更名成_config.json_放在與bot的啟動檔同路徑即可
 
 ## commands
 
