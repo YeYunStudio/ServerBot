@@ -3,8 +3,8 @@ from discord.ext import commands
 import json
 import keep_alive
 
-with open('config.json', 'r', encoding='utf8') as bot:
-	config = json.load(bot)
+with open('config.json', 'r', encoding='utf8') as data:
+	config = json.load(data)
 
 bot = commands.Bot(command_prefix=config['prefix'])
 
