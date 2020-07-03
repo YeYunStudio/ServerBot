@@ -18,12 +18,12 @@ class Events(commands.Cog):
 	@commands.Cog.listener()
 	async def on_member_join(self, member):
 		channel = self.bot.get_channel(int(config['welcome_channel']))
-		await channel.send(f'{member.mention}'+ '進入了'+ f'{member.guild.name}!')
+		await channel.send(f'{member.mention}'+ ' 進入了 '+ f'{member.guild.name}!')
 
 	@commands.Cog.listener()
 	async def on_member_remove(self, member):
 		channel = self.bot.get_channel(int(config['goodbye_channel']))
-		await channel.send(f'**{member.name}#{member.discriminator}**'+ '離開了'+ f'{member.guild.name}')
+		await channel.send(f'**{member.name}#{member.discriminator}**'+ ' 離開了 '+ f'{member.guild.name}')
 
 def setup(bot):
 	bot.add_cog(Events(bot))
