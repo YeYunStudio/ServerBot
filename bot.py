@@ -11,6 +11,7 @@ bot = commands.Bot(command_prefix=config['prefix'])
 
 @bot.event
 async def on_ready():
+	await bot.change_presence(activity=discord.Game(name=">>Release Mode<<"))
 	print(f'Logged in as: {bot.user.name}')
 	print(f'With ID: {bot.user.id}')
 	print(f'Prefix: {bot.command_prefix}')
@@ -67,8 +68,9 @@ async def invite(ctx):
 
 @bot.command()
 @commands.is_owner()
-async def shutdown(parameter_list):
-	pass
+async def shutdown(ctx):
+	await ctx.send('正在關機')
+	await bot.close()
 
 @shutdown.error
 async def shutdown_error(ctx, error):
@@ -77,8 +79,10 @@ async def shutdown_error(ctx, error):
 
 @bot.command()
 @commands.is_owner()
-async def reboot(parameter_list):
-	pass
+async def reboot(ctx):
+	await ctx.send('正在重啟')
+	await bot.close()
+	await bot.login(token=config['token'], bot=True)
 
 @reboot.error
 async def reboot_error(ctx, error):
