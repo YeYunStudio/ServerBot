@@ -23,7 +23,7 @@ config需要自行生成
 請勿濫用
 
 指令|功能|分類|需要最低權限
----|---|---|---
+:---:|:---:|:---:|:---:
 help|引導至此說明頁面|Core|Everyone
 prefix|查看前綴|Core|Everyone
 ping|檢查延遲|Utilities|Everyone
@@ -32,3 +32,15 @@ ban|封禁成員|Moderations|Administrator
 enable|啟用功能|Core|Owner
 disable|停用功能|Core|Owner
 reload|重新載入功能區|Core|Owner
+
+## aliases
+
+本bot的部分指令有縮寫
+
+縮寫速查請看此表
+
+指令|縮寫|其他縮寫|其他縮寫
+:---:|:---:|:---:|:---:
+help|h||
+calculate|calc|math|
+clean|clear|cls|clr
