@@ -26,6 +26,7 @@ config需要自行生成
 :---:|:---:|:---:|:---:
 help|引導至此說明頁面|Core|Everyone
 prefix|查看前綴|Core|Everyone
+aliases|查看縮寫|core|Everyone
 ping|檢查延遲|Utilities|Everyone
 kick|踢出成員|Moderations|Administrator
 ban|封禁成員|Moderations|Administrator
