@@ -91,6 +91,11 @@ async def reboot_error(ctx, error):
 	if isinstance(error, commands.NotOwner):
 		await ctx.send('您無法使用這個指令\n原因:不是機器人的擁有者')
 
+@bot.command()
+async def aliases(ctx):
+	await ctx.send('請到此處查看唷～')
+	await ctx.send(config['aliases'])
+
 for filename in os.listdir('./cmds'):
 	if filename.endswith('.py'):
 		bot.load_extension(f'cmds.{filename[:-3]}')
