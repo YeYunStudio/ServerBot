@@ -1,7 +1,10 @@
 import discord
 from discord.ext import commands
 import time
+import json
 
+with open ('aliases.json', 'r', encoding='utf8') as aliases:
+	aliases = json.load(aliases)
 
 class Moderations(commands.Cog):
 	def __init__(self, bot):
@@ -33,7 +36,7 @@ class Moderations(commands.Cog):
 		if isinstance(error, commands.MissingPermissions):
 			await ctx.send('無法使用ban指令\n理由：缺少相關權限(管理員)')
 	
-	@commands.command()
+	@commands.command(aliases = aliases['clean'])
 	@commands.has_permissions(manage_messages=True)
 	async def clean(self, ctx, num : int):
 		await ctx.channel.purge(limit = num+1)

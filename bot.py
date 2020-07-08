@@ -6,6 +6,8 @@ import keep_alive
 
 with open ('config.json', 'r', encoding='utf8') as data:
 	config = json.load(data)
+with open ('aliases.json', 'r', encoding='utf8') as aliases:
+	aliases = json.load(aliases)
 
 bot = commands.Bot(command_prefix=config['prefix'])
 
@@ -17,7 +19,7 @@ async def on_ready():
 	print(f'Prefix: {bot.command_prefix}')
 
 bot.remove_command('help')
-@bot.command()
+@bot.command(aliases = aliases['help'])
 async def help(ctx):
 	await ctx.send('請到此處查看唷')
 	await ctx.send(config['help'])
