@@ -1,17 +1,17 @@
 {
-    "help":
-    [
-        "h"
-    ],
-    "calculate":
-    [
-        "math",
-        "calc"
-    ],
-    "clean":
-    [
-        "cls",
-        "clr",
-        "clear"
-    ]
+	"help":
+	[
+		"h"
+	],
+	"calculate":
+	[
+		"math",
+		"calc"
+	],
+	"clean":
+	[
+		"cls",
+		"clr",
+		"clear"
+	]
 }
